@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rencana Usaha Bersama (RUB)</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
 
 <style>
 
@@ -25,6 +25,28 @@ background:#2952cc;
 color:white;
 padding:20px;
 text-align:center;
+position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
+}
+
+/* Gaya untuk tombol kembali */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #5a7ee0; /* Warna yang sedikit berbeda */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #4a6ecb;
 }
 
 .container{
@@ -104,6 +126,13 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 color:#666;
+position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
+}
+
+/* Tombol kembali di footer */
+.footer .back-button {
+    position: static; /* Mengatur kembali posisi statis agar tidak absolute terhadap footer */
+    margin-top: 20px; /* Memberi sedikit jarak dari teks footer */
 }
 
 </style>
@@ -112,6 +141,9 @@ color:#666;
 <body>
 
 <header>
+<a href="URL_BERANDA_ANDA" class="back-button">
+    <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+</a>
 <h1>Rencana Usaha Bersama (RUB)</h1>
 <p>Sistem Informasi Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
 </header>
@@ -142,7 +174,7 @@ hingga analisis data yang dapat diunduh dalam format Microsoft Excel.
 Formulir pendaftaran anggota atau peserta kegiatan usaha bersama.
 </p>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeBlDASR4Hx2Af7iI6gbOK1oucGMKhWaTMCT78VXl8-hp4fww/viewform?usp=header"
+<a href="[docs.google.com](https://docs.google.com/forms/d/e/1FAIpQLSeBlDASR4Hx2Af7iI6gbOK1oucGMKhWaTMCT78VXl8-hp4fww/viewform?usp=header)"
 target="_blank"
 class="btn">
 Buka Form
@@ -158,7 +190,7 @@ Buka Form
 Melihat hasil pengisian formulir pendaftaran yang tersimpan pada Google Spreadsheet.
 </p>
 
-<a href="https://docs.google.com/spreadsheets/d/18YCnZiPHENjpNQ3xfJeO9GJBFX0KwlwSPXFru06EHGM/edit?usp=sharing"
+<a href="[docs.google.com](https://docs.google.com/spreadsheets/d/18YCnZiPHENjpNQ3xfJeO9GJBFX0KwlwSPXFru06EHGM/edit?usp=sharing)"
 target="_blank"
 class="btn">
 Lihat Spreadsheet
@@ -174,7 +206,7 @@ Lihat Spreadsheet
 Formulir penilaian tingkat kepuasan anggota terhadap kegiatan kelompok.
 </p>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdB-J9fVKTgkqzGrwSWwAzztotSV2MJbKHHbmYR54mPh3cM4w/viewform?usp=header"
+<a href="[docs.google.com](https://docs.google.com/forms/d/e/1FAIpQLSdB-J9fVKTgkqzGrwAzztotSV2MJbKHHbmYR54mPh3cM4w/viewform?usp=header)"
 target="_blank"
 class="btn">
 Isi Survey
@@ -190,7 +222,7 @@ Isi Survey
 Melihat data hasil survey kepuasan yang tersimpan secara otomatis.
 </p>
 
-<a href="https://docs.google.com/spreadsheets/d/1EP1MjYuJBQZgA1tpaR1QwM6tNk1NID2kG2pQ1YEbJmU/edit?usp=sharing"
+<a href="[docs.google.com](https://docs.google.com/spreadsheets/d/1EP1MjYuJBQZgA1tpaR1QwM6tNk1NID2kG2pQ1YEbJmU/edit?usp=sharing)"
 target="_blank"
 class="btn">
 Lihat Hasil
@@ -206,7 +238,7 @@ Lihat Hasil
 Visualisasi data pendaftaran dan tingkat kepuasan dalam bentuk dashboard interaktif.
 </p>
 
-<a href="https://datastudio.google.com/embed/reporting/c4254422-2f42-48a3-bd88-c809ef236733/page/page_12345"
+<a href="[datastudio.google.com](https://datastudio.google.com/embed/reporting/c4254422-2f42-48a3-bd88-c809ef236733/page/page_12345)"
 target="_blank"
 class="btn">
 Buka Dashboard
@@ -222,7 +254,7 @@ Buka Dashboard
 Visualisasi data pendaftaran dan tingkat kepuasan dalam bentuk dashboard interaktif.
 </p>
 
-<a href="https://datastudio.google.com/embed/reporting/e1cd4628-a4b5-4b14-90fb-8956dded3226/page/page_12345"
+<a href="[datastudio.google.com](https://datastudio.google.com/embed/reporting/e1cd4628-a4b5-4b14-90fb-8956dded3226/page/page_12345)"
 target="_blank"
 class="btn">
 Buka Dashboard
@@ -238,7 +270,7 @@ Buka Dashboard
 Unduh file hasil analisis data yang telah diolah menggunakan Microsoft Excel.
 </p>
 
-<a href="https://docs.google.com/spreadsheets/d/1guba_mSOUK53wBRIijT11_MNoI8ZbREl/edit?usp=sharing&ouid=101206049725368087904&rtpof=true&sd=true"
+<a href="[docs.google.com](https://docs.google.com/spreadsheets/d/1guba_mSOUK53wBRIijT11_MNoI8ZbREl/edit?usp=sharing&ouid=101206049725368087904&rtpof=true&sd=true)"
 download
 class="btn">
 Download Excel
@@ -251,6 +283,10 @@ Download Excel
 
 <div class="footer">
 © 2026 Sistem Informasi POKLAHSAR | Rencana Usaha Bersama (RUB)
+<br>
+<a href="URL_BERANDA_ANDA" class="btn back-button">
+    <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+</a>
 </div>
 
 </body>
