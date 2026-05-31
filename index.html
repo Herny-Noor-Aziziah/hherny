@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rencana Usaha Bersama (RUB)</title>
 
-<link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -28,7 +28,7 @@ text-align:center;
 position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
 }
 
-/* Gaya untuk tombol kembali */
+/* Gaya untuk tombol kembali (diperbarui agar mendukung elemen button) */
 .back-button {
     position: absolute;
     top: 20px;
@@ -43,6 +43,9 @@ position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
     align-items: center;
     gap: 5px;
     transition: background 0.3s ease;
+    border: none;      /* Menghilangkan border bawaan button */
+    cursor: pointer;    /* Mengubah kursor menjadi telunjuk */
+    font-size: 14px;
 }
 
 .back-button:hover {
@@ -127,6 +130,10 @@ padding:20px;
 margin-top:30px;
 color:#666;
 position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 /* Tombol kembali di footer */
@@ -141,9 +148,9 @@ position: relative; /* Menambahkan posisi relatif untuk penempatan tombol */
 <body>
 
 <header>
-<a href="URL_BERANDA_ANDA" class="back-button">
+<button onclick="kembaliKeAsal()" class="back-button">
     <i class="fas fa-arrow-left"></i> Kembali ke Beranda
-</a>
+</button>
 <h1>Rencana Usaha Bersama (RUB)</h1>
 <p>Sistem Informasi Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
 </header>
@@ -165,8 +172,6 @@ hingga analisis data yang dapat diunduh dalam format Microsoft Excel.
 
 <div class="grid">
 
-<!-- FORM PENDAFTARAN -->
-
 <div class="card">
 <i class="fas fa-file-signature"></i>
 <h3>Google Form Pendaftaran</h3>
@@ -180,8 +185,6 @@ class="btn">
 Buka Form
 </a>
 </div>
-
-<!-- SPREADSHEET PENDAFTARAN -->
 
 <div class="card">
 <i class="fas fa-table"></i>
@@ -197,8 +200,6 @@ Lihat Spreadsheet
 </a>
 </div>
 
-<!-- FORM KEPUASAN -->
-
 <div class="card">
 <i class="fas fa-star"></i>
 <h3>Survey Kepuasan</h3>
@@ -212,8 +213,6 @@ class="btn">
 Isi Survey
 </a>
 </div>
-
-<!-- SPREADSHEET KEPUASAN -->
 
 <div class="card">
 <i class="fas fa-chart-bar"></i>
@@ -229,8 +228,6 @@ Lihat Hasil
 </a>
 </div>
 
-<!-- LOOKER STUDIO -->
-
 <div class="card">
 <i class="fas fa-chart-pie"></i>
 <h3>Dashboard Looker Studio</h3>
@@ -245,9 +242,7 @@ Buka Dashboard
 </a>
 </div>
 
-  <!-- LOOKER STUDIO -->
-
-<div class="card">
+  <div class="card">
 <i class="fas fa-chart-pie"></i>
 <h3>Dashboard Looker Studio</h3>
 <p>
@@ -260,8 +255,6 @@ class="btn">
 Buka Dashboard
 </a>
 </div>
-
-<!-- FILE ANALISIS -->
 
 <div class="card">
 <i class="fas fa-file-excel"></i>
@@ -284,10 +277,28 @@ Download Excel
 <div class="footer">
 © 2026 Sistem Informasi POKLAHSAR | Rencana Usaha Bersama (RUB)
 <br>
-<a href="URL_BERANDA_ANDA" class="btn back-button">
+<button onclick="kembaliKeAsal()" class="back-button">
     <i class="fas fa-arrow-left"></i> Kembali ke Beranda
-</a>
+</button>
 </div>
+
+<script>
+function kembaliKeAsal() {
+    // 1. Cek URL halaman asal tempat user mengklik link ini (Beda repo/file tetap terlacak)
+    if (document.referrer) {
+        window.location.href = document.referrer;
+    } 
+    // 2. Jika enkripsi privasi browser menyembunyikan referrer, gunakan history back
+    else if (history.length > 1) {
+        history.back();
+    } 
+    // 3. Jika dibuka langsung tanpa ada riwayat klik sebelumnya, munculkan pemberitahuan/tutup tab
+    else {
+        alert("Tidak ada halaman sebelumnya untuk kembali.");
+        window.close();
+    }
+}
+</script>
 
 </body>
 </html>
